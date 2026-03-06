@@ -18,6 +18,6 @@ def create_app():
     migrate.init_app(app,db)
     bcrypt.init_app(app)
     jwt.init_app(app)
-    app.register_blueprint(users_bp, url_prefix="/users")
+    app.register_blueprint(users_bp, url_prefix="/api/users")
 
     return app
